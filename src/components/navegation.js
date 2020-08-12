@@ -1,19 +1,36 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import styled from '@emotion/styled';
+
+const Nav = styled.nav`
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 3rem;
+
+    @media (min-width: 768px) {
+        padding: 0;
+        flex-direction: row;
+    }
+`;
+
+const NavLink = styled(Link)`
+    color: #FFF;
+
+`;
 
 const Navegation = () => {
     return ( 
-        <nav>
-            <Link
+        <Nav>
+            <NavLink
                 to={'/'}
-            >Index</Link>
-            <Link
+            >Index</NavLink>
+            <NavLink
                 to={'/us'}
-            >US</Link>
-            <Link
+            >US</NavLink>
+            <NavLink
                 to={'/properties'}
-            >Properties</Link>
-        </nav>
+            >Properties</NavLink>
+        </Nav>
      );
 }
  
