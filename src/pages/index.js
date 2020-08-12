@@ -6,11 +6,12 @@ const Index = () => {
 
     const index = useIndex();
 
-    console.log(index);
+    const { name, content, image } = index[0];
 
     return ( 
         <Layout>
-            <h1>Index</h1>
+            <h1>{name}</h1>
+            <p>{content}</p>
         </Layout>
      );
 }
