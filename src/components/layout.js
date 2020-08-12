@@ -1,9 +1,18 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import { Global, css } from '@emotion/core';
 
 const Layout = ({ children }) => {
     return ( 
         <>
+        <Global 
+            styles={css`
+                body{ 
+                    background-color: red;
+                }
+            `}
+        
+        />
         <Helmet>
             <title>Bienes Raices Gatsby</title>
             <meta name="description" content="Web site of bienes raices on Gatsby" />
