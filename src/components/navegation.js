@@ -15,6 +15,17 @@ const Nav = styled.nav`
 
 const NavLink = styled(Link)`
     color: #FFF;
+    font-weight: 700;
+    font-family: 'PT Sans', sans-serif;
+    text-decoration: none;
+    padding: .5rem;
+    margin-right: 1rem;
+    &:last-of-type {
+        margin-right: 0;
+    }
+    &.current-page {
+        border-bottom: 2px solid #FFF;
+    }
 
 `;
 
@@ -23,12 +34,15 @@ const Navegation = () => {
         <Nav>
             <NavLink
                 to={'/'}
+                activeClassName="current-page"
             >Index</NavLink>
             <NavLink
                 to={'/us'}
-            >US</NavLink>
+                activeClassName="current-page"
+            >Us</NavLink>
             <NavLink
                 to={'/properties'}
+                activeClassName="current-page"
             >Properties</NavLink>
         </Nav>
      );
