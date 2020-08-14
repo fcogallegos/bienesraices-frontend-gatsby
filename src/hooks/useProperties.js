@@ -31,7 +31,21 @@ const useProperties = () => {
             }
         }
     `);
-    console.log(data);
+    //console.log(data);
+
+    return data.allStrapiProperties.nodes.map(propertie => ({
+        name: propertie.name,
+        description: propertie.description,
+        image: propertie.image,
+        id: propertie.id,
+        wc: propertie.wc,
+        parking: propertie.parking,
+        rooms: propertie.rooms,
+        price: propertie.price,
+        agent: propertie.agent,
+        category: propertie.category
+    }))
+
 }
 
 export default useProperties;
