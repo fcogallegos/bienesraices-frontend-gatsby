@@ -1,6 +1,8 @@
 import React from 'react';
 import Layout from '../components/layout';
 import useIndex from '../hooks/useIndex';
+import { css } from '@emotion/core';
+import styled from '@emotion/styled';
 
 const Index = () => {
 
@@ -10,8 +12,22 @@ const Index = () => {
 
     return ( 
         <Layout>
-            <h1>{name}</h1>
-            <p>{content}</p>
+            <main>
+                <div
+                    css={css`
+                        max-width: 800px;
+                        margin: 0 auto;
+                    `}
+                >
+                    <h1>{name}</h1>
+                    <p
+                        css={css`
+                            text-align: justify;
+                        `}
+                    >{content}</p>
+                </div>
+            </main>
+
         </Layout>
      );
 }

@@ -21,6 +21,7 @@ const useIndex = () => {
             }
         }
     `);
+    
     return result.allStrapiPages.nodes.map( index => ({
         name: index.name,
         content: index.content,
