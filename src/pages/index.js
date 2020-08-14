@@ -3,6 +3,12 @@ import Layout from '../components/layout';
 import useIndex from '../hooks/useIndex';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
+import BackgroundImage from 'gatsby-background-image'; 
+
+
+const ImageBackground = styled(BackgroundImage)`
+    height: 600px;
+`;
 
 const Index = () => {
 
@@ -12,6 +18,15 @@ const Index = () => {
 
     return ( 
         <Layout>
+            <ImageBackground
+                tag="section"
+                fluid={image.sharp.fluid}
+                fadeIn="soft"
+            >
+                <div>
+                    <h1>Sale of exclusive houses and apartments</h1>
+                </div>
+            </ImageBackground>
             <main>
                 <div
                     css={css`
