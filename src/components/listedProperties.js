@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { css } from '@emotion/core';
 import useProperties from '../hooks/useProperties';
 import PropertiePreview from './propertiePreview';
+import listedPropertiesCSS from '../css/listedProperties.module.css';
 
 const ListedProperties = () => {
 
@@ -22,7 +23,7 @@ const ListedProperties = () => {
             `}
         >Our Properties</h2>
 
-        <ul>
+        <ul className={listedPropertiesCSS.properties}>
             {properties.map( propertie => (
                 <PropertiePreview 
                     key={propertie.id}
